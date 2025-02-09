@@ -5,6 +5,9 @@ class ApiService extends Service {
 		super.setup();
 
 		this.app.get("/_health", (c) => c.text("OK"));
+		this.app.get("/error", (c) => {
+			throw new Error("Oops!");
+		});
 	}
 }
 
