@@ -4,7 +4,7 @@
 	"type": "module",
 	"scripts": {
 		"clean": "rimraf --no-interactive dist",
-		"build": "bun build . --compile --outfile=dist/cdn",
+		"build": "bun build . --compile --outfile=dist/api",
 		"build:clean": "bun run clean && bun run build",
 		"typecheck": "tsc",
 		"test": "bun test",
