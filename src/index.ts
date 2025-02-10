@@ -1,10 +1,11 @@
 import { Service } from "@shutters/shutterkit";
+import { health } from "./api";
 
 class ApiService extends Service {
 	protected setup() {
 		super.setup();
 
-		this.app.get("/_health", (c) => c.text("OK"));
+    this.app.route('/', health.createRouter());
 	}
 }
 
